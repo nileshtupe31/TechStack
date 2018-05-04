@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-class LibraryList extends Component {
+class LibraryItem extends Component {
 
   render() {
     return (
@@ -12,4 +12,4 @@ class LibraryList extends Component {
   }
 }
 
-export default LibraryList;
+export default LibraryItem;
