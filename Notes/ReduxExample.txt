@@ -1,0 +1,32 @@
+
+const reducer = (state = [], action) => {
+  if (action.type === 'split_string') {
+  	return action.payload.split('');
+  }
+
+  if (action.type === 'add_string') {
+  	return [...state,action.payload]; // Never mutate state
+  }
+
+	return state;
+}
+
+const store = Redux.createStore(reducer); // pass Reducer function to create store
+
+store.getState();
+
+const actionSplit = {
+	type: 'split_string',
+  payload: 'asdfg'
+}
+
+store.dispatch(actionSplit);
+
+const actionAdd = {
+	type: 'add_string',
+  payload: 'h'
+}
+
+store.dispatch(actionAdd);
+
+store.getState();
