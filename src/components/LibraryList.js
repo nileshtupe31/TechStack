@@ -6,7 +6,6 @@ import LibraryItem from './LibraryItem';
 class LibraryList extends Component {
 
   componentWillMount() {
-    console.log(this.props);
     const ds = new ListView.DataSource({
       rowHasChanged: (r1, r2) => r1 !== r2
     });
